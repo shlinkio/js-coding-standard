@@ -1,0 +1,41 @@
+{
+  "name": "@shlinkio/js-coding-standard",
+  "version": "1.0.0",
+  "description": "Coding standard used by shlink JavaScript projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shlinkio/js-coding-standard.git"
+  },
+  "keywords": [
+    "eslint",
+    "lint",
+    "typescript",
+    "coding-standard"
+  ],
+  "author": "Alejandro Celaya <alejandro@alejandrocelaya.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shlinkio/js-coding-standard/issues"
+  },
+  "homepage": "https://github.com/shlinkio/js-coding-standard",
+  "dependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint-config-adidas-babel": "^1.1.0",
+    "eslint-config-adidas-env": "^1.1.0",
+    "eslint-config-adidas-react": "^1.1.1",
+    "eslint-config-adidas-typescript": "^1.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.3"
+  },
+  "peerDependencies": {
+    "eslint": "^5.12.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "typescript": "3.6.2"
+  }
+}

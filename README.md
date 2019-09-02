@@ -1,2 +1,3 @@
-# js-coding-standard
-Coding standard used by shlink JavaScript projects
+# Shlink - JS coding standard
+
+Coding standard used by shlink JavaScript projects.
