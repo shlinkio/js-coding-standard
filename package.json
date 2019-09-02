@@ -1,6 +1,6 @@
 {
   "name": "@shlinkio/eslint-config-js-coding-standard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Coding standard used by shlink JavaScript projects",
   "main": "index.js",
   "repository": {

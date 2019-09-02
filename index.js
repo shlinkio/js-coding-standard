@@ -28,6 +28,7 @@ module.exports = {
     'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
     'react/jsx-filename-extension': ['error', {'extensions': ['.js', '.jsx', '.ts', '.tsx']}],
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-magic-numbers': 'off',
     '@typescript-eslint/array-type': ['error', 'array']
   },
   settings: {
