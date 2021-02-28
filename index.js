@@ -14,6 +14,12 @@ module.exports = {
     }
   },
   rules: {
+    'max-len': ['error', {
+      code: 120,
+      ignoreStrings: true,
+      ignoreTemplateLiterals: true,
+      ignoreComments: true
+    }],
     'comma-dangle': ['error', 'always-multiline'],
     'no-invalid-this': 'off',
     'no-inline-comments': 'off',
@@ -21,6 +27,8 @@ module.exports = {
     'template-curly-spacing': ['error', 'never'],
     'no-warning-comments': 'off',
     'no-undefined': 'off',
+    'object-shorthand': 'off',
+    'no-mixed-operators': 'off',
     'indent': ['error', 2, {'SwitchCase': 1}],
     "no-empty-function": "off",
     "lines-around-comment": "off",
@@ -32,8 +40,12 @@ module.exports = {
     'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
     'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
     'react/jsx-filename-extension': ['error', {'extensions': ['.js', '.jsx', '.ts', '.tsx']}],
+    'react/display-name': 'off',
+    'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-magic-numbers': 'off',
+    '@typescript-eslint/no-extraneous-class': 'off',
+    '@typescript-eslint/require-array-sort-compare': 'off',
     '@typescript-eslint/array-type': ['error', { default: 'array' }],
     '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }]
   },
