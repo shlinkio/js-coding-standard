@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  shlink_js_coding_standard_node:
+    container_name: shlink_js_coding_standard_node
+    image: node:14.15-alpine
+    volumes:
+      - ./:/home/shlink
