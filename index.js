@@ -20,7 +20,7 @@ module.exports = {
       ignoreTemplateLiterals: true,
       ignoreComments: true
     }],
-    'comma-dangle': ['error', 'always-multiline'],
+    'comma-dangle': 'off',
     'no-invalid-this': 'off',
     'no-inline-comments': 'off',
     'no-console': 'warn',
@@ -46,7 +46,10 @@ module.exports = {
     '@typescript-eslint/no-magic-numbers': 'off',
     '@typescript-eslint/no-extraneous-class': 'off',
     '@typescript-eslint/require-array-sort-compare': 'off',
+    '@typescript-eslint/method-signature-style': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/array-type': ['error', { default: 'array' }],
+    '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
     '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }]
   },
   settings: {
