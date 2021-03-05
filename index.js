@@ -30,11 +30,11 @@ module.exports = {
     'object-shorthand': 'off',
     'no-mixed-operators': 'off',
     'indent': ['error', 2, {'SwitchCase': 1}],
-    "no-empty-function": "off",
-    "lines-around-comment": "off",
-    "no-magic-numbers": "off",
-    "react/no-array-index-key": "off",
-    "react/no-did-update-set-state": "off",
+    'no-empty-function': 'off',
+    'lines-around-comment': 'off',
+    'no-magic-numbers': 'off',
+    'react/no-array-index-key': 'off',
+    'react/no-did-update-set-state': 'off',
     'react/jsx-curly-spacing': ['error', 'never'],
     'react/jsx-indent-props': ['error', 2],
     'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
@@ -50,7 +50,12 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/array-type': ['error', { default: 'array' }],
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
-    '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }]
+    '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }],
+    'no-nonoctal-decimal-escape': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/ban-types': 'off',
+    '@typescript-eslint/naming-convention': 'off'
   },
   settings: {
     react: {
