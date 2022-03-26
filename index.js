@@ -1,72 +1,43 @@
 module.exports = {
   extends: [
-    'adidas-env/browser',
-    'adidas-env/module',
-    'adidas-env/node',
-    'adidas-babel',
-    'adidas-react',
-    'adidas-typescript'
+    'airbnb',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended'
   ],
-  parserOptions: {
-    ecmaVersion: 2019,
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
   rules: {
-    'max-len': ['error', {
-      code: 120,
-      ignoreStrings: true,
-      ignoreTemplateLiterals: true,
-      ignoreComments: true
-    }],
-    'comma-dangle': 'off',
-    'no-invalid-this': 'off',
-    'no-inline-comments': 'off',
-    'no-console': 'warn',
-    'template-curly-spacing': ['error', 'never'],
-    'no-warning-comments': 'off',
-    'no-undefined': 'off',
-    'object-shorthand': 'off',
-    'no-mixed-operators': 'off',
-    'indent': ['error', 2, {'SwitchCase': 1}],
-    'no-empty-function': 'off',
-    'lines-around-comment': 'off',
-    'no-magic-numbers': 'off',
-    'react/no-array-index-key': 'off',
-    'react/no-did-update-set-state': 'off',
-    'react/jsx-curly-spacing': ['error', 'never'],
-    'react/jsx-indent-props': ['error', 2],
-    'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
-    'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
-    'react/jsx-filename-extension': ['error', {'extensions': ['.js', '.jsx', '.ts', '.tsx']}],
-    'react/display-name': 'off',
+    'object-curly-newline': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'no-restricted-globals': 'off',
+    'default-case': 'off',
+    'max-len': [
+      'error',
+      { 'code':  120, 'ignoreComments': true, 'ignoreStrings': true, 'ignoreTemplateLiterals': true },
+    ],
+    'import/no-cycle': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': 'off',
     'react/react-in-jsx-scope': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-magic-numbers': 'off',
-    '@typescript-eslint/no-extraneous-class': 'off',
-    '@typescript-eslint/require-array-sort-compare': 'off',
-    '@typescript-eslint/method-signature-style': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/array-type': ['error', { default: 'array' }],
-    '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
-    '@typescript-eslint/indent': ['error', 2, { SwitchCase: 1 }],
-    'no-nonoctal-decimal-escape': 'off',
-    '@typescript-eslint/no-unsafe-assignment': 'off',
-    '@typescript-eslint/no-unsafe-member-access': 'off',
+    'react/prop-types': 'off',
+    'react/require-default-props': 'off',
+    'react/function-component-definition': 'off',
+    'react/no-array-index-key': 'off',
+    'react/no-unstable-nested-components': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-no-useless-fragment': 'off',
+    '@typescript-eslint/no-unused-expressions': 'off',
     '@typescript-eslint/ban-types': 'off',
-    '@typescript-eslint/naming-convention': 'off'
-  },
-  settings: {
-    react: {
-      version: 'detect'
-    }
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/lines-between-class-members': 'off'
   },
   overrides: [
     {
-      'files': ['**/*.tsx'],
-      'rules': {
-        'react/prop-types': 'off'
+      files: ['*.test.*'],
+      rules: {
+        'prefer-promise-reject-errors': 'off',
+        'no-param-reassign': 'off',
+        'react/no-children-prop': 'off',
+        '@typescript-eslint/no-shadow': 'off'
       }
     }
   ]
