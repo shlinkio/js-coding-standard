@@ -32,7 +32,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.test.*'],
+      files: ['*.test.*', '*.spec.*'],
       rules: {
         'prefer-promise-reject-errors': 'off',
         'no-param-reassign': 'off',
