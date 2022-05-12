@@ -2,3 +2,4 @@ node_modules
 .idea
 docker-compose.override.yml
 home
+dist

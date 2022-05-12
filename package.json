@@ -2,7 +2,7 @@
   "name": "@shlinkio/eslint-config-js-coding-standard",
   "version": "2.0.1",
   "description": "Coding standard used by shlink JavaScript projects",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shlinkio/js-coding-standard.git"
@@ -19,6 +19,9 @@
     "url": "https://github.com/shlinkio/js-coding-standard/issues"
   },
   "homepage": "https://github.com/shlinkio/js-coding-standard",
+  "scripts": {
+    "build": "mkdir -p dist && rm -rf dist/* && cp index.js dist"
+  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
@@ -31,5 +34,8 @@
   "devDependencies": {
     "eslint": "^8.12.0",
     "typescript": "^4.6.3"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
