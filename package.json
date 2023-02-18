@@ -23,17 +23,18 @@
     "build": "mkdir -p dist && rm -rf dist/* && cp index.js dist"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.16.0",
-    "@typescript-eslint/parser": "^5.16.0",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^16.1.4"
+    "eslint-config-airbnb-typescript": "^16.2.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0"
   },
   "peerDependencies": {
-    "eslint": "^8.12.0"
+    "eslint": "^8.34.0"
   },
   "devDependencies": {
-    "eslint": "^8.12.0",
-    "typescript": "^4.6.3"
+    "eslint": "^8.34.0",
+    "typescript": "^4.9.5"
   },
   "files": [
     "dist"

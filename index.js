@@ -4,15 +4,34 @@ module.exports = {
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended'
   ],
+  plugins: ['simple-import-sort'],
   rules: {
-    'object-curly-newline': 'off',
-    'implicit-arrow-linebreak': 'off',
-    'no-restricted-globals': 'off',
-    'default-case': 'off',
+    // Customize rules or add on top of presets
     'max-len': [
       'error',
       { 'code':  120, 'ignoreComments': true, 'ignoreStrings': true, 'ignoreTemplateLiterals': true },
     ],
+    '@typescript-eslint/consistent-type-imports': 'error',
+    'simple-import-sort/imports': ['error', {
+      'groups': [
+        ['^', '^\\.', '\\.s?css$']
+      ]
+    }],
+    'no-restricted-exports': ['error', {
+      'restrictDefaultExports': {
+        'direct': true,
+        'named': true,
+        'defaultFrom': true,
+        'namedFrom': true,
+        'namespaceFrom': true
+      }
+    }],
+
+    // Disabled rules from presets
+    'object-curly-newline': 'off',
+    'implicit-arrow-linebreak': 'off',
+    'no-restricted-globals': 'off',
+    'default-case': 'off',
     'import/no-cycle': 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
