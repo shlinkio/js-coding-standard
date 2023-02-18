@@ -7,13 +7,13 @@ on:
 
 jobs:
   npm-package:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+        uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - run: npm version ${GITHUB_REF#refs/tags/v} --git-tag-version=false
@@ -24,10 +24,10 @@ jobs:
 
   github-release:
     needs: ['npm-package']
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Publish release
         uses: docker://antonyurchenko/git-release:latest
         env:
