@@ -2,7 +2,8 @@ module.exports = {
   extends: [
     'airbnb',
     'airbnb-typescript',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended'
   ],
   plugins: ['simple-import-sort'],
   rules: {
