@@ -39,6 +39,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
+    'react/no-unused-prop-types': 'off',
     'react/function-component-definition': 'off',
     'react/no-array-index-key': 'off',
     'react/no-unstable-nested-components': 'off',
