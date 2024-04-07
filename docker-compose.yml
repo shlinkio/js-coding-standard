@@ -3,6 +3,6 @@ version: '3'
 services:
   shlink_js_coding_standard_node:
     container_name: shlink_js_coding_standard_node
-    image: node:20.3-alpine
+    image: node:20.12-alpine
     volumes:
       - ./:/home/shlink
