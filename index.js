@@ -1,11 +1,22 @@
 module.exports = {
   extends: [
-    'airbnb',
-    'airbnb-typescript',
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended'
   ],
-  plugins: ['simple-import-sort'],
+  plugins: ['jsx-a11y', 'simple-import-sort'],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
   rules: {
     // Customize rules or add on top of presets
     'max-len': [
@@ -15,6 +26,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': 'error',
     'simple-import-sort/imports': ['error', {
       'groups': [
+        // First external imports, then local imports, then styles imports
         ['^', '^\\.', '\\.s?css$']
       ]
     }],
@@ -36,6 +48,7 @@ module.exports = {
     'import/no-cycle': 'off',
     'import/prefer-default-export': 'off',
     'import/no-extraneous-dependencies': 'off',
+    'react/display-name': ['off', { ignoreTranspilerName: false }],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
