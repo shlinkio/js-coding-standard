@@ -1,11 +1,22 @@
 module.exports = {
   extends: [
-    'airbnb',
-    'airbnb-typescript',
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended'
   ],
-  plugins: ['simple-import-sort'],
+  plugins: ['jsx-a11y', 'simple-import-sort'],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    }
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
+  },
   rules: {
     // Customize rules or add on top of presets
     'max-len': [
@@ -15,6 +26,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': 'error',
     'simple-import-sort/imports': ['error', {
       'groups': [
+        // First external imports, then local imports, then styles imports
         ['^', '^\\.', '\\.s?css$']
       ]
     }],
@@ -29,27 +41,10 @@ module.exports = {
     }],
 
     // Disabled rules from presets
-    'object-curly-newline': 'off',
-    'implicit-arrow-linebreak': 'off',
-    'no-restricted-globals': 'off',
-    'default-case': 'off',
-    'import/no-cycle': 'off',
-    'import/prefer-default-export': 'off',
-    'import/no-extraneous-dependencies': 'off',
-    'react/react-in-jsx-scope': 'off',
+    'react/display-name': ['off', { 'ignoreTranspilerName': false }],
     'react/prop-types': 'off',
-    'react/require-default-props': 'off',
-    'react/no-unused-prop-types': 'off',
-    'react/function-component-definition': 'off',
-    'react/no-array-index-key': 'off',
-    'react/no-unstable-nested-components': 'off',
-    'react/jsx-one-expression-per-line': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/jsx-no-useless-fragment': 'off',
-    '@typescript-eslint/no-unused-expressions': 'off',
     '@typescript-eslint/ban-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/lines-between-class-members': 'off'
+    '@typescript-eslint/no-explicit-any': 'off'
   },
   overrides: [
     {

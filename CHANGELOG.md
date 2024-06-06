@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [2.5.0] - 2024-06-06
+#### Added
+* *Nothing*
+
+#### Changed
+* Make all dependencies peer dependencies, so that dependabot can update them on every project.
+
+#### Deprecated
+* *Nothing*
+
+#### Removed
+* Remove airbnb plugins.
+
+#### Fixed
+* *Nothing*
+
+
 ## [2.4.0] - 2024-04-07
 #### Added
 * *Nothing*
