@@ -6,7 +6,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended'
   ],
-  plugins: ['jsx-a11y', 'simple-import-sort'],
+  plugins: ['jsx-a11y', 'simple-import-sort', '@stylistic'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -19,10 +19,26 @@ module.exports = {
   },
   rules: {
     // Customize rules or add on top of presets
-    'max-len': [
+    '@stylistic/arrow-parens': 'error',
+    '@stylistic/arrow-spacing': 'error',
+    '@stylistic/block-spacing': 'error',
+    '@stylistic/comma-dangle': ['error', 'always-multiline'],
+    '@stylistic/eol-last': 'error',
+    '@stylistic/function-call-spacing': 'error',
+    '@stylistic/indent': ['error', 2],
+    '@stylistic/key-spacing': 'error',
+    '@stylistic/keyword-spacing': 'error',
+    '@stylistic/max-len': [
       'error',
       { 'code':  120, 'ignoreComments': true, 'ignoreStrings': true, 'ignoreTemplateLiterals': true },
     ],
+    '@stylistic/no-trailing-spaces': 'error',
+    '@stylistic/object-curly-spacing': ['error', 'always'],
+    '@stylistic/quotes': ['error', 'single'],
+    '@stylistic/jsx-quotes': ['error', 'prefer-double'],
+    '@stylistic/rest-spread-spacing': 'error',
+    '@stylistic/semi': 'error',
+    '@stylistic/spaced-comment': 'error',
     '@typescript-eslint/consistent-type-imports': 'error',
     'simple-import-sort/imports': ['error', {
       'groups': [

@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [2.5.1] - 2024-06-09
+#### Added
+* *Nothing*
+
+#### Changed
+* *Nothing*
+
+#### Deprecated
+* *Nothing*
+
+#### Removed
+* *Nothing*
+
+#### Fixed
+* Recover some rules lost when airbnb plugins were removed, by adding @stylistic eslint plugin.
+
+
 ## [2.5.0] - 2024-06-06
 #### Added
 * *Nothing*
