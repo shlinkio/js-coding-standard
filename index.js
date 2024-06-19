@@ -18,7 +18,6 @@ module.exports = {
     }
   },
   rules: {
-    // Customize rules or add on top of presets
     '@stylistic/arrow-parens': 'error',
     '@stylistic/arrow-spacing': 'error',
     '@stylistic/block-spacing': 'error',
@@ -30,6 +29,7 @@ module.exports = {
     '@stylistic/keyword-spacing': 'error',
     '@stylistic/max-len': [
       'error',
+      // Do not allow more than 120 characters per line, except for long strings and comments in the same line
       { 'code':  120, 'ignoreComments': true, 'ignoreStrings': true, 'ignoreTemplateLiterals': true },
     ],
     '@stylistic/no-trailing-spaces': 'error',
@@ -39,7 +39,10 @@ module.exports = {
     '@stylistic/rest-spread-spacing': 'error',
     '@stylistic/semi': 'error',
     '@stylistic/spaced-comment': 'error',
+    '@stylistic/no-multiple-empty-lines': ['error', { 'max': 1 }],
+
     '@typescript-eslint/consistent-type-imports': 'error',
+
     'simple-import-sort/imports': ['error', {
       'groups': [
         // First external imports, then local imports, then styles imports
