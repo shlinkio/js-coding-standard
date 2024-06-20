@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [3.0.0] - 2024-06-20
+#### Added
+* *Nothing*
+
+#### Changed
+* [#84](https://github.com/shlinkio/js-coding-standard/issues/84) Migrate to ESLint flat config.
+* [#112](https://github.com/shlinkio/js-coding-standard/issues/112) Split into two ESLint configs, one for React-specific rules, and one for the rest of rules.
+
+#### Deprecated
+* *Nothing*
+
+#### Removed
+* *Nothing*
+
+#### Fixed
+* *Nothing*
+
+
 ## [2.5.2] - 2024-06-19
 #### Added
 * *Nothing*
