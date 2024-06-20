@@ -6,7 +6,7 @@ import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export const baseConfig = tseslint.config(
   {
     extends: [
       eslint.configs.recommended,
@@ -15,26 +15,8 @@ export default tseslint.config(
     plugins: {
       '@stylistic': stylistic,
       'simple-import-sort': simpleImportSort,
-      'jsx-a11y': pluginJsxA11y,
-      react,
-      'react-hooks': eslintPluginReactHooks, // TODO Check if eslint/compat is needed here
-    },
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-    settings: {
-      react: {
-        version: 'detect'
-      }
     },
     rules: {
-      ...pluginJsxA11y.configs.recommended.rules,
-      ...eslintPluginReactHooks.configs.recommended.rules,
-
       '@stylistic/arrow-parens': 'error',
       '@stylistic/arrow-spacing': 'error',
       '@stylistic/block-spacing': 'error',
@@ -77,8 +59,6 @@ export default tseslint.config(
       }],
 
       // Disabled rules from presets
-      'react/display-name': ['off', { 'ignoreTranspilerName': false }],
-      'react/prop-types': 'off',
       '@typescript-eslint/ban-types': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
     },
@@ -88,8 +68,48 @@ export default tseslint.config(
     rules: {
       'prefer-promise-reject-errors': 'off',
       'no-param-reassign': 'off',
-      'react/no-children-prop': 'off',
-      '@typescript-eslint/no-shadow': 'off'
-    }
+      '@typescript-eslint/no-shadow': 'off',
+    },
   },
+);
+
+export const reactConfig = tseslint.config(
+  {
+    plugins: {
+      'jsx-a11y': pluginJsxA11y,
+      react,
+      'react-hooks': eslintPluginReactHooks,
+    },
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    },
+    rules: {
+      ...pluginJsxA11y.configs.recommended.rules,
+      ...eslintPluginReactHooks.configs.recommended.rules,
+
+      // Disabled rules from presets
+      'react/display-name': ['off', { 'ignoreTranspilerName': false }],
+      'react/prop-types': 'off',
+    },
+  },
+  {
+    files: ['*.test.*', '*.spec.*'],
+    rules: {
+      'react/no-children-prop': 'off',
+    },
+  },
+);
+
+export default tseslint.config(
+  ...baseConfig,
+  ...reactConfig,
 );
