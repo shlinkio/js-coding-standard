@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [3.1.0] - 2024-09-12
+#### Added
+* [#109](https://github.com/shlinkio/js-coding-standard/issues/109) Add support for `eslint` 9.x.
+
+#### Changed
+* *Nothing*
+
+#### Deprecated
+* *Nothing*
+
+#### Removed
+* Drop support for `typescript-eslint` 7.x.
+
+#### Fixed
+* *Nothing*
+
+
 ## [3.0.1] - 2024-08-01
 #### Added
 * Add support for `typescript-eslint` 8.0.
