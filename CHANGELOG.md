@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [3.2.0] - 2024-10-12
+#### Added
+* Add support for `eslint-plugin-react-hooks` 5.x.
+
+#### Changed
+* *Nothing*
+
+#### Deprecated
+* *Nothing*
+
+#### Removed
+* *Nothing*
+
+#### Fixed
+* *Nothing*
+
+
 ## [3.1.0] - 2024-09-12
 #### Added
 * [#109](https://github.com/shlinkio/js-coding-standard/issues/109) Add support for `eslint` 9.x.
