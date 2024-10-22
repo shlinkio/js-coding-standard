@@ -7,11 +7,9 @@ import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tseslint from 'typescript-eslint';
 
 export const baseConfig = tseslint.config(
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    extends: [
-      eslint.configs.recommended,
-      ...tseslint.configs.recommended,
-    ],
     plugins: {
       '@stylistic': stylistic,
       'simple-import-sort': simpleImportSort,
@@ -73,11 +71,12 @@ export const baseConfig = tseslint.config(
   },
 );
 
-export const reactConfig = tseslint.config(
+export const reactConfig = [
+  react.configs.flat.recommended,
+  react.configs.flat['jsx-runtime'],
+  pluginJsxA11y.flatConfigs.recommended,
   {
     plugins: {
-      'jsx-a11y': pluginJsxA11y,
-      react,
       'react-hooks': eslintPluginReactHooks,
     },
     languageOptions: {
@@ -93,8 +92,8 @@ export const reactConfig = tseslint.config(
       }
     },
     rules: {
-      ...pluginJsxA11y.configs.recommended.rules,
-      ...eslintPluginReactHooks.configs.recommended.rules,
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'error',
 
       // Disabled rules from presets
       'react/display-name': ['off', { 'ignoreTranspilerName': false }],
@@ -107,9 +106,9 @@ export const reactConfig = tseslint.config(
       'react/no-children-prop': 'off',
     },
   },
-);
+];
 
-export default tseslint.config(
+export default [
   ...baseConfig,
   ...reactConfig,
-);
+];
