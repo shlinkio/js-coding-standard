@@ -23,7 +23,7 @@
     "build": "mkdir -p dist && rm -rf dist/* && cp index.js dist"
   },
   "peerDependencies": {
-    "@stylistic/eslint-plugin": "^2.1.0",
+    "@stylistic/eslint-plugin": "^3.0.1",
     "eslint": "^9.10.0 || ^8.57.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.34.2",
