@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [3.4.0] - 2025-02-22
+#### Added
+* Support any version of `@stylistic/eslint-plugin` newer than 3.0. This allows this library to continue working even if they release major versions (which happens frequently).
+
+  If a new major versions becomes incompatible for any reason, dependabot will highlight it.
+
+#### Changed
+* *Nothing*
+
+#### Deprecated
+* *Nothing*
+
+#### Removed
+* Drop support for ESLint 8.
+
+#### Fixed
+* *Nothing*
+
+
 ## [3.3.0] - 2025-01-31
 #### Added
 * Update to `@stylistic/eslint-plugin` 3.0
