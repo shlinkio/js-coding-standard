@@ -10,6 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 #### Changed
 * Update `react/jsx-tag-spacing` so that it requires a space before closing tag.
+* Update `@stylistic/eslint-plugin` to >=4.2
+* Update `typescript-eslint` to ^8.28
 
 #### Deprecated
 * *Nothing*
