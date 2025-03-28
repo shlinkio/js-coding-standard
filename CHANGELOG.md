@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [3.4.1] - 2025-03-28
+#### Added
+* *Nothing*
+
+#### Changed
+* Update `react/jsx-tag-spacing` so that it requires a space before closing tag.
+
+#### Deprecated
+* *Nothing*
+
+#### Removed
+* *Nothing*
+
+#### Fixed
+* *Nothing*
+
+
 ## [3.4.0] - 2025-02-22
 #### Added
 * Support any version of `@stylistic/eslint-plugin` newer than 3.0. This allows this library to continue working even if they release major versions (which happens frequently).

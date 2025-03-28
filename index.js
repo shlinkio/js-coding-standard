@@ -92,6 +92,7 @@ export const reactConfig = [
       }
     },
     rules: {
+      'react/jsx-tag-spacing': ['error', { beforeClosing: 'never' }],
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'error',
 
