@@ -1,14 +1,20 @@
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import importPlugin from 'eslint-plugin-import';
+import importXPlugin from 'eslint-plugin-import-x';
 import stylistic from '@stylistic/eslint-plugin';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import { createTypeScriptImportResolver } from 'eslint-import-resolver-typescript';
 
 const baseConfig = tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  importPlugin.flatConfigs.recommended,
+  importXPlugin.flatConfigs.recommended,
   {
+    settings: {
+      'import-x/resolver-next': [
+        createTypeScriptImportResolver()
+      ],
+    },
     plugins: {
       '@stylistic': stylistic,
       'simple-import-sort': simpleImportSort,
@@ -55,12 +61,12 @@ const baseConfig = tseslint.config(
         }
       }],
 
-      'import/no-duplicates': 'error',
+      'import-x/no-duplicates': 'error',
 
       // Disabled rules from presets
       '@typescript-eslint/ban-types': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
-      'import/no-unresolved': 'off',
+      'import-x/no-unresolved': 'off',
     },
   },
   {
