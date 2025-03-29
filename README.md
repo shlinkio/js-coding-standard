@@ -7,9 +7,12 @@
 
 Coding standard used by Shlink JavaScript projects.
 
-This library includes two ESLint configurations, the base one (which includes eslint and typescript recommended rules), and the react-specific one (which includes JSX accessibility, react and react hooks recommended rules).
+This library includes two ESLint configurations on their own entry points:
 
-Default export includes both:
+* `/base`: includes recommended eslint, typescript and imports rules
+* `/react` includes recommended JSX accessibility, react, react hooks and react compiler rules.
+
+The default entry point includes both of them:
 
 ```js
 // eslint.config.js
@@ -27,10 +30,24 @@ If the project does not use React, you can just use the base config:
 
 ```js
 // eslint.config.js
-import { baseConfig } from '@shlinkio/eslint-config-js-coding-standard';
+import baseConfig from '@shlinkio/eslint-config-js-coding-standard/base';
 
 export default [
   ...baseConfig,
+  {
+    // Other rules...
+  }
+];
+```
+
+If you need to access react rules independently, use the `/react` entry point:
+
+```js
+// eslint.config.js
+import reactConfig from '@shlinkio/eslint-config-js-coding-standard/react';
+
+export default [
+  ...reactConfig,
   {
     // Other rules...
   }

@@ -1,8 +1,19 @@
 {
   "name": "@shlinkio/eslint-config-js-coding-standard",
   "description": "Coding standard used by shlink JavaScript projects",
-  "main": "dist/index.js",
   "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./base": {
+      "import": "./dist/base.js"
+    },
+    "./react": {
+      "import": "./dist/react.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shlinkio/js-coding-standard.git"
@@ -20,16 +31,32 @@
   },
   "homepage": "https://github.com/shlinkio/js-coding-standard",
   "scripts": {
-    "build": "mkdir -p dist && rm -rf dist/* && cp index.js dist"
+    "build": "mkdir -p dist && rm -rf dist/* && cp *.js dist"
   },
   "peerDependencies": {
     "@stylistic/eslint-plugin": ">=4.2.0",
     "eslint": "^9.20.1",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-compiler": "*",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "typescript-eslint": "^8.28"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-jsx-a11y":  {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-compiler":  {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "typescript": "^5.8.2"
