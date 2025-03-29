@@ -1,14 +1,17 @@
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
+import importPlugin from 'eslint-plugin-import';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
-import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
+import reactCompiler from 'eslint-plugin-react-compiler';
+import reactHooks from 'eslint-plugin-react-hooks';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import tseslint from 'typescript-eslint';
 
 export const baseConfig = tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
+  importPlugin.flatConfigs.recommended,
   {
     plugins: {
       '@stylistic': stylistic,
@@ -56,9 +59,12 @@ export const baseConfig = tseslint.config(
         }
       }],
 
+      'import/no-duplicates': 'error',
+
       // Disabled rules from presets
       '@typescript-eslint/ban-types': 'off',
       '@typescript-eslint/no-explicit-any': 'off',
+      'import/no-unresolved': 'off',
     },
   },
   {
@@ -75,9 +81,10 @@ export const reactConfig = [
   react.configs.flat.recommended,
   react.configs.flat['jsx-runtime'],
   pluginJsxA11y.flatConfigs.recommended,
+  reactCompiler.configs.recommended,
   {
     plugins: {
-      'react-hooks': eslintPluginReactHooks,
+      'react-hooks': reactHooks,
     },
     languageOptions: {
       parserOptions: {
