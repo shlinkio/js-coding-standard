@@ -6,18 +6,9 @@ export default defineConfig({
     'typescript',
     'import',
   ],
-  jsPlugins: [
-    'eslint-plugin-simple-import-sort',
-  ],
   rules: {
     '@typescript-eslint/consistent-type-imports': 'error',
 
-    'simple-import-sort/imports': ['error', {
-      'groups': [
-        // First external imports, then local imports, then styles imports
-        ['^', '^\\.', '\\.s?css$']
-      ]
-    }],
     'no-restricted-exports': ['error', {
       'restrictDefaultExports': {
         'direct': true,
