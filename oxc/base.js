@@ -33,7 +33,6 @@ export default defineConfig({
     // Disabled rules from presets
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    'import/no-unresolved': 'off',
   },
   overrides: [
     {

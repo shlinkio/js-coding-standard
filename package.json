@@ -14,13 +14,13 @@
       "import": "./dist/react.js"
     },
     "./oxc/oxlint": {
-      "import": "./dist/oxc/oxlint.ts"
+      "import": "./dist/oxc/oxlint.js"
     },
     "./oxc/base": {
-      "import": "./dist/oxc/base.ts"
+      "import": "./dist/oxc/base.js"
     },
     "./oxc/react": {
-      "import": "./dist/oxc/react.ts"
+      "import": "./dist/oxc/react.js"
     }
   },
   "repository": {
