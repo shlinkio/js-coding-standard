@@ -21,6 +21,9 @@
     },
     "./oxc/react": {
       "import": "./dist/oxc/react.js"
+    },
+    "./oxc/oxfmt": {
+      "import": "./dist/oxc/oxfmt.js"
     }
   },
   "repository": {
@@ -51,6 +54,7 @@
     "eslint-plugin-react-compiler": "*",
     "eslint-plugin-react-hooks": "^7.0.0",
     "eslint-plugin-simple-import-sort": "^12.1.0",
+    "oxfmt": "^0.60.0",
     "oxlint": "^1.75.0",
     "typescript-eslint": "^8.65.0"
   },
@@ -80,6 +84,9 @@
       "optional": true
     },
     "oxlint": {
+      "optional": true
+    },
+    "oxfmt": {
       "optional": true
     },
     "typescript-eslint": {
