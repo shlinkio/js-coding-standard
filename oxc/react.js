@@ -7,6 +7,8 @@ export default defineConfig({
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
 
+    'jsx-a11y/prefer-tag-over-role': 'off',
+
     // Disabled rules from presets
     'react/display-name': ['off', { 'ignoreTranspilerName': false }],
   },
