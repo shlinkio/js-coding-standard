@@ -21,6 +21,9 @@
     },
     "./oxc/react": {
       "import": "./dist/oxc/react.js"
+    },
+    "./oxc/oxfmt": {
+      "import": "./dist/oxc/oxfmt.js"
     }
   },
   "repository": {
