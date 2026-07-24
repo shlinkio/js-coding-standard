@@ -7,6 +7,8 @@
 
 Coding standard used by Shlink JavaScript projects.
 
+## ESLint
+
 This library includes two ESLint configurations on their own entry points:
 
 * `/base`: includes recommended eslint, typescript and imports rules
@@ -52,4 +54,57 @@ export default [
     // Other rules...
   }
 ];
+```
+
+## Oxlint
+
+This library includes two Oxlint configurations on their own entry points:
+
+* `/oxc/base`: includes recommended eslint, typescript and imports rules.
+* `/oxc/react` includes recommended JSX accessibility, react, react hooks and react compiler rules.
+* `/oxc/oxlint` extends the above rules.
+
+The default entry point includes both of them:
+
+```js
+// oxlint.config.ts
+import shlink from '@shlinkio/eslint-config-js-coding-standard/oxc/oxlint';
+import { defineConfig } from 'oxlint';
+
+export default defineConfig({
+  extends: [shlink],
+  rules: {
+    // Other rules...
+  },
+});
+```
+
+If the project does not use React, you can just use the base config:
+
+```js
+// oxlint.config.ts
+import baseConfig from '@shlinkio/eslint-config-js-coding-standard/oxc/base';
+import { defineConfig } from 'oxlint';
+
+export default defineConfig({
+  extends: [baseConfig],
+  rules: {
+    // Other rules...
+  },
+});
+```
+
+If you need to access react rules independently, use the `/oxc/react` entry point:
+
+```js
+// eslint.config.js
+import reactConfig from '@shlinkio/eslint-config-js-coding-standard/oxc/react';
+import { defineConfig } from 'oxlint';
+
+export default defineConfig({
+  extends: [reactConfig],
+  rules: {
+    // Other rules...
+  },
+});
 ```

@@ -12,6 +12,15 @@
     },
     "./react": {
       "import": "./dist/react.js"
+    },
+    "./oxc/oxlint": {
+      "import": "./dist/oxc/oxlint.ts"
+    },
+    "./oxc/base": {
+      "import": "./dist/oxc/base.ts"
+    },
+    "./oxc/react": {
+      "import": "./dist/oxc/react.ts"
     }
   },
   "repository": {
@@ -31,7 +40,7 @@
   },
   "homepage": "https://github.com/shlinkio/js-coding-standard",
   "scripts": {
-    "build": "mkdir -p dist && rm -rf dist/* && cp *.js dist"
+    "build": "mkdir -p dist && rm -rf dist/* && cp *.js dist && cp -r oxc dist"
   },
   "peerDependencies": {
     "@stylistic/eslint-plugin": ">=4.2.0",
@@ -42,9 +51,20 @@
     "eslint-plugin-react-compiler": "*",
     "eslint-plugin-react-hooks": "^7.0.0",
     "eslint-plugin-simple-import-sort": "^12.1.0",
+    "oxlint": "^1.75.0",
+    "oxfmt": "^0.60.0",
     "typescript-eslint": "^8.65.0"
   },
   "peerDependenciesMeta": {
+    "@stylistic/eslint-plugin":  {
+      "optional": true
+    },
+    "eslint":  {
+      "optional": true
+    },
+    "eslint-plugin-import":  {
+      "optional": true
+    },
     "eslint-plugin-jsx-a11y":  {
       "optional": true
     },
@@ -55,6 +75,15 @@
       "optional": true
     },
     "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "oxlint": {
+      "optional": true
+    },
+    "oxfmt": {
+      "optional": true
+    },
+    "typescript-eslint": {
       "optional": true
     }
   },
