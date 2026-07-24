@@ -108,3 +108,14 @@ export default defineConfig({
   },
 });
 ```
+
+## Oxfmt
+
+This library exposes a base configuration for Oxfmt
+
+```js
+// oxfmt.config.ts
+import formatterConfig from '@shlinkio/eslint-config-js-coding-standard/oxc/oxfmt';
+
+export default formatterConfig;
+```
