@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [3.9.1] - 2026-07-25
+#### Added
+* *Nothing*
+
+#### Changed
+* Enable type-awareness for Oxlint base config.
+
+#### Deprecated
+* *Nothing*
+
+#### Removed
+* *Nothing*
+
+#### Fixed
+* Fix some Oxlint rule names in react and base Oxlint configs.
+
+
 ## [3.9.0] - 2026-07-24
 #### Added
 * Add configurations for Oxlint.

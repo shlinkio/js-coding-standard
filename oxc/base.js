@@ -6,10 +6,12 @@ export default defineConfig({
     'typescript',
     'import',
   ],
+  options: {
+    typeAware: true,
+  },
   rules: {
-    '@typescript-eslint/consistent-type-imports': 'error',
-
-    'no-restricted-exports': ['error', {
+    'typescript/consistent-type-imports': 'error',
+    'eslint/no-restricted-exports': ['error', {
       'restrictDefaultExports': {
         'direct': true,
         'named': true,
@@ -18,20 +20,19 @@ export default defineConfig({
         'namespaceFrom': true
       }
     }],
-
     'import/no-duplicates': 'error',
 
     // Disabled rules from presets
-    '@typescript-eslint/ban-types': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
+    'typescript/ban-types': 'off',
+    'typescript/no-explicit-any': 'off',
   },
   overrides: [
     {
       files: ['*.test.*', '*.spec.*'],
       rules: {
-        'prefer-promise-reject-errors': 'off',
-        'no-param-reassign': 'off',
-        '@typescript-eslint/no-shadow': 'off',
+        'eslint/prefer-promise-reject-errors': 'off',
+        'eslint/no-param-reassign': 'off',
+        'typescript/no-shadow': 'off',
       }
     }
   ],

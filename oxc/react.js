@@ -4,12 +4,11 @@ export default defineConfig({
   plugins: ['react', 'jsx-a11y'],
   rules: {
     'react/react-compiler': 'error',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
-
-    'jsx-a11y/prefer-tag-over-role': 'off',
+    'react/rules-of-hooks': 'error',
+    'react/exhaustive-deps': 'error',
 
     // Disabled rules from presets
+    'jsx-a11y/prefer-tag-over-role': 'off',
     'react/display-name': ['off', { 'ignoreTranspilerName': false }],
   },
   overrides: [
