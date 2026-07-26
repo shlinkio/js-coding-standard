@@ -1,4 +1,4 @@
-import { defineConfig } from 'oxlint.js';
+import { defineConfig } from 'oxlint';
 
 export default defineConfig({
   plugins: ['react', 'jsx-a11y'],
