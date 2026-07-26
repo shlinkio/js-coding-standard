@@ -7,68 +7,19 @@
 
 Coding standard used by Shlink JavaScript projects.
 
-## ESLint
-
-This library includes two ESLint configurations on their own entry points:
-
-* `/base`: includes recommended eslint, typescript and imports rules
-* `/react` includes recommended JSX accessibility, react, react hooks and react compiler rules.
-
-The default entry point includes both of them:
-
-```js
-// eslint.config.js
-import shlink from '@shlinkio/eslint-config-js-coding-standard';
-
-export default [
-  ...shlink,
-  {
-    // Other rules...
-  }
-];
-```
-
-If the project does not use React, you can just use the base config:
-
-```js
-// eslint.config.js
-import baseConfig from '@shlinkio/eslint-config-js-coding-standard/base';
-
-export default [
-  ...baseConfig,
-  {
-    // Other rules...
-  }
-];
-```
-
-If you need to access react rules independently, use the `/react` entry point:
-
-```js
-// eslint.config.js
-import reactConfig from '@shlinkio/eslint-config-js-coding-standard/react';
-
-export default [
-  ...reactConfig,
-  {
-    // Other rules...
-  }
-];
-```
-
 ## Oxlint
 
 This library includes two Oxlint configurations on their own entry points:
 
-* `/oxc/base`: includes recommended eslint, typescript and imports rules.
-* `/oxc/react` includes recommended JSX accessibility, react, react hooks and react compiler rules.
-* `/oxc/oxlint` extends the above rules.
+* `/base`: includes recommended eslint, typescript and imports rules.
+* `/react` includes recommended JSX accessibility, react, react hooks and react compiler rules.
+* `/oxlint` extends the above rules.
 
 The default entry point includes both of them:
 
 ```js
 // oxlint.config.ts
-import shlink from '@shlinkio/eslint-config-js-coding-standard/oxc/oxlint';
+import { oxlint as shlink } from '@shlinkio/eslint-config-js-coding-standard';
 import { defineConfig } from 'oxlint';
 
 export default defineConfig({
@@ -83,7 +34,7 @@ If the project does not use React, you can just use the base config:
 
 ```js
 // oxlint.config.ts
-import baseConfig from '@shlinkio/eslint-config-js-coding-standard/oxc/base';
+import baseConfig from '@shlinkio/eslint-config-js-coding-standard/base';
 import { defineConfig } from 'oxlint';
 
 export default defineConfig({
@@ -98,7 +49,7 @@ If you need to access react rules independently, use the `/oxc/react` entry poin
 
 ```js
 // eslint.config.js
-import reactConfig from '@shlinkio/eslint-config-js-coding-standard/oxc/react';
+import reactConfig from '@shlinkio/eslint-config-js-coding-standard/react';
 import { defineConfig } from 'oxlint';
 
 export default defineConfig({
@@ -115,7 +66,7 @@ This library exposes a base configuration for Oxfmt
 
 ```js
 // oxfmt.config.ts
-import formatterConfig from '@shlinkio/eslint-config-js-coding-standard/oxc/oxfmt';
+import { oxfmt as formatterConfig } from '@shlinkio/eslint-config-js-coding-standard';
 
 export default formatterConfig;
 ```

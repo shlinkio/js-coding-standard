@@ -1,7 +1,4 @@
-import baseConfig from './base.js';
-import reactConfig from './react.js';
+import oxlint from './oxlint.js';
+import oxfmt from './oxfmt.js';
 
-export default [
-  ...baseConfig,
-  ...reactConfig,
-];
+export default { oxlint, oxfmt };
