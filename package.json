@@ -7,23 +7,17 @@
     ".": {
       "import": "./dist/index.js"
     },
+    "./oxlint": {
+      "import": "./dist/oxlint.js"
+    },
     "./base": {
       "import": "./dist/base.js"
     },
     "./react": {
       "import": "./dist/react.js"
     },
-    "./oxc/oxlint": {
-      "import": "./dist/oxc/oxlint.js"
-    },
-    "./oxc/base": {
-      "import": "./dist/oxc/base.js"
-    },
-    "./oxc/react": {
-      "import": "./dist/oxc/react.js"
-    },
-    "./oxc/oxfmt": {
-      "import": "./dist/oxc/oxfmt.js"
+    "./oxfmt": {
+      "import": "./dist/oxfmt.js"
     }
   },
   "repository": {
@@ -31,8 +25,10 @@
     "url": "git+https://github.com/shlinkio/js-coding-standard.git"
   },
   "keywords": [
-    "eslint",
+    "oxlint",
+    "oxfmt",
     "lint",
+    "format",
     "typescript",
     "coding-standard"
   ],
@@ -43,62 +39,15 @@
   },
   "homepage": "https://github.com/shlinkio/js-coding-standard",
   "scripts": {
-    "build": "mkdir -p dist && rm -rf dist/* && cp *.js dist && cp -r oxc dist"
+    "build": "mkdir -p dist && rm -rf dist/* && cp *.js dist"
   },
   "peerDependencies": {
-    "@stylistic/eslint-plugin": ">=4.2.0",
-    "eslint": "^10.0.0 || ^9.20.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.8.0",
-    "eslint-plugin-react": "^7.34.2",
-    "eslint-plugin-react-compiler": "*",
-    "eslint-plugin-react-hooks": "^7.0.0",
-    "eslint-plugin-simple-import-sort": "^12.1.0",
     "oxfmt": ">=0.60.0",
     "oxlint": "^1.75.0",
-    "oxlint-tsgolint": "^7.0.2001",
-    "typescript-eslint": "^8.65.0"
-  },
-  "peerDependenciesMeta": {
-    "@stylistic/eslint-plugin": {
-      "optional": true
-    },
-    "eslint": {
-      "optional": true
-    },
-    "eslint-plugin-import": {
-      "optional": true
-    },
-    "eslint-plugin-jsx-a11y": {
-      "optional": true
-    },
-    "eslint-plugin-react": {
-      "optional": true
-    },
-    "eslint-plugin-react-compiler": {
-      "optional": true
-    },
-    "eslint-plugin-react-hooks": {
-      "optional": true
-    },
-    "eslint-plugin-simple-import-sort": {
-      "optional": true
-    },
-    "oxlint": {
-      "optional": true
-    },
-    "oxlint-tsgolint": {
-      "optional": true
-    },
-    "oxfmt": {
-      "optional": true
-    },
-    "typescript-eslint": {
-      "optional": true
-    }
+    "oxlint-tsgolint": "^7.0.2001"
   },
   "devDependencies": {
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.2"
   },
   "files": [
     "dist"

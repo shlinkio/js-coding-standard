@@ -2,6 +2,6 @@ services:
   shlink_js_coding_standard_node:
     container_name: shlink_js_coding_standard_node
     user: 1000:1000
-    image: node:22.10-alpine
+    image: node:26.5-alpine
     volumes:
       - ./:/home/shlink

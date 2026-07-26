@@ -1,4 +1,4 @@
-import { defineConfig } from 'oxfmt';
+import { defineConfig } from 'oxfmt.js';
 
 export default defineConfig({
   printWidth: 120,
