@@ -1,4 +1,5 @@
-import oxlint from './oxlint.js';
-import oxfmt from './oxfmt.js';
+import oxlintConfig from './oxlint.js';
+import oxfmtConfig from './oxfmt.js';
 
-export default { oxlint, oxfmt };
+export const oxlint = oxlintConfig;
+export const oxfmt = oxfmtConfig;
