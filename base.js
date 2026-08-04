@@ -20,6 +20,7 @@ export default defineConfig({
         'namespaceFrom': true
       }
     }],
+    'eslint/no-unused-vars': 'error',
     'import/no-duplicates': 'error',
 
     // Disabled rules from presets
